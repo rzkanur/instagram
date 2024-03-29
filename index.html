@@ -119,10 +119,10 @@
                 <div class="feed flex-col">
                     <div class="profile flex-row">
                         <div class="img-wrap">
-                            <img class="feed-profile" src="image/profile/2.jpeg" alt="">
+                            <img class="feed-profile" src="image/profile//profile.jpeg" alt="">
                         </div>
                         <p class="flex-col">
-                            <span>mellow_svxi</span>
+                            <span>zkanr_</span>
                             <span>YG Entertainment, Korea</span>
                         </p>
                         <img width="20" src="image/icons/10.png" alt="">
@@ -140,6 +140,7 @@
                             <div class="swiper-button-next"></div>
                     </div>
                     <div class="feed-icons flex-row">
+                        <img id="heart" onclick="like()" src="image/icons/11.png">
                         <img src="image/icons/11.png" alt=""/>
                         <img src="image/icons/12.png" alt=""/>
                         <img src="image/icons/13.png" alt=""/>
@@ -257,7 +258,17 @@
                 </div>
             </div>
         <script>
-        
+        let is_liked = true;
+
+            function like() {
+                if (is_liked == true) {
+                    $("#heart").attr("src", "image/icons/15.png");
+                    is_liked = false;
+                } else {
+                    $("#heart").attr("src", "image/icons/11.png");
+                    is_liked = true;
+                }
+            }
             const swiper = new Swiper('.swiper', {
                 direction: 'horizontal',
                 loop: true,
